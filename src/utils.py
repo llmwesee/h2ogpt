@@ -668,7 +668,7 @@ def cuda_vis_check(total_gpus):
                 total_gpus,
                 os.getenv("CUDA_VISIBLE_DEVICES").count(",") + 1)
             which_gpus = os.getenv("CUDA_VISIBLE_DEVICES").split(",")
-            which_gpus = [int(x) for x in which_gpus]
+            which_gpus = [x for x in which_gpus]
     else:
         which_gpus = list(range(0, total_gpus))
 
